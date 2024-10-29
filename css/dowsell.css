@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 40px; /* Aumentado o padding para dar mais espaço ao conteúdo */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 130px;
+}
+
+.offer-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  animation: slideIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.pricing {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #ff3131;
+}
+
+.btn-cta {
+  background-color: #ff3131;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Adicionando um espaço acima do botão */
+}
+
+.btn-cta:hover {
+  background-color: #d32828;
+}
+
+.floating-bubble {
+  position: absolute;
+  top: 70px; /* Ajustado para ficar mais distante do topo */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff3131;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 49, 49, 0.4);
+  animation: float 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
